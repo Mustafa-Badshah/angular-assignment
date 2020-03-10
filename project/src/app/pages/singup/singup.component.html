@@ -1,0 +1,38 @@
+<div class="container text-center">
+    <h3>Singup</h3>
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-offset-4 form-style">
+            <div class="form-group">
+                <label for="">User Name</label>
+                <input type="text" class="form-control" placeholder="User Name" [(ngModel)]="user.name">
+            </div>
+            <div class="form-group">
+                <label for="">User Email</label>
+                <input type="text" class="form-control" placeholder="User Email" [(ngModel)]="user.email">
+            </div>
+            <div class="form-group">
+                <label for="">Contact No.</label>
+                <input type="text" class="form-control" placeholder="Contact No." [(ngModel)]="user.contact">
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" placeholder="Password" [(ngModel)]="user.password">
+            </div>
+            <div class="form-group">
+                <label for="">Confirm Password</label>
+                <input type="password" class="form-control" placeholder="Confirm Password">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Singup" (click)="submit(user)" class="btn btn-info">
+            </div>
+        </div>
+    </div>
+</div>

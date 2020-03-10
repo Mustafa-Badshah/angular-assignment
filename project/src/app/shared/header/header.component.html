@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="myMenu">
+        <a class="navbar-brand" href="#">Angular Project</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="/">Home </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="/">About </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="/">Contact </a>
+            </li>
+            <ng-template [ngIf]="_login.isLoggedin()" [ngIfElse]="beforelogin">
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/product">Product </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/dash">DashBoard </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="_login.Logout()" style="cursor: pointer;">Logout</a>
+                </li>
+            </ng-template>
+            <ng-template #beforelogin>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/singup">Singup</a>
+                </li>
+            </ng-template>
+        </ul>
+    </div>
+</nav>
